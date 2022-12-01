@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+<body class="bg-mainBg dark:bg-darkMainBg">
+    <aside class="bg-asideBg w-[300px] min-h-screen fixed pt-10 px-5 dark:border-left">
+        <div class="user flex items-center justify-between cursor-pointer border-bot pb-3">
+            <div class="user-data flex items-center">
+                <img src="assets/avatar.png" class="h-10 w-10 rounded-full" alt="avatar">
+                <div class="user-name ml-4">
+                    <p class="text-darkTextClr">Панькин Кирилл</p>
+                    <p class="text-lineAsClr">РП-42</p>
+                    <!-- Тут будет иконка с уведомлениями -->
+                </div>
+            </div>
+            <img class="h-5 self-start mt-2 settings" src="assets/settings.svg" alt="">
+        </div>
+
+        <!-- Навигация -->
+        <nav class="mt-7">
+            <ul>
+                <li class="pl-4 cursor-pointer py-3 text-darkTextClr mb-1 border-bot flex items-center">
+                    <img class="max-h-8" src="assets/home.svg" alt="">
+                    <a href="" class="mt-1 ml-3">Главная</a>
+                </li>
+                <li class="pl-4 cursor-pointer py-3 text-darkTextClr mb-1 border-bot flex items-center">
+                    <img class="max-h-8" src="assets/home.svg" alt="">
+                    <a href="" class="mt-1 ml-3">Оценки</a>
+                </li>
+                <li class="pl-4 cursor-pointer py-3 text-darkTextClr mb-1 border-bot flex items-center">
+                    <img class="max-h-8" src="assets/home.svg" alt="">
+                    <a href="" class="mt-1 ml-3">Расписание</a>
+                </li>
+                <li class="pl-4 cursor-pointer py-3 text-darkTextClr mb-1 border-bot flex items-center">
+                    <img class="max-h-8" src="assets/home.svg" alt="">
+                    <a href="" class="mt-1 ml-3">Долги</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Ссылка наверх страницы -->
+
+        <div class="absolute bottom-[40px] text-darkTextClr w-[260px]">
+            <div class="cursor-pointer flex items-center border-bot pb-3">
+                <img src="assets/arrow.svg" alt="">
+                <a href = "#search" class="ml-3">вернуться наверх</a>
+            </div>
+        </div>
+        
+    </aside>
+    <!-- Контейнер под контент -->
+    <div class="wrapper pl-[300px] pt-[40px] w-full">
+        <!-- Сам контент -->
+        <main class="mx-auto max-w-7xl px-5">
+            <div id="search" class="search w-full rounded-3xl flex items-center justify-between px-9 bg-blocksBg h-16">
+                <form action="" class="w-3/4 flex items-center">
+                    <input type="text" placeholder="искать новость" name="search" class="outline-none w-3/4 p-2 pb-1 mb-2 border-bot">
+                    <!-- Надо сделать иконку поиска -->
+                    <button class="ml-6">найти</button>
+                </form>
+                <button class="bg-buttonsBg px-4 py-2 rounded-2xl">Сбросить</button>
+            </div>
+
+            <!-- Контейнер под статьи и фильтры -->
+            <div class="articles-container mt-[40px] grid grid-cols-4 gap-6">
+                <div class="articles col-start-1 col-end-4 h-96">
+                    <article class="bg-blocksBg"></article>
+                </div>
+                <div class="filters"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

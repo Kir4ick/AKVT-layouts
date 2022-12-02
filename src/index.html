@@ -8,9 +8,16 @@
     <title>Home</title>
 </head>
 <body class="bg-mainBg dark:bg-darkMainBg">
-    <aside class="bg-asideBg w-[300px] min-h-screen fixed pt-10 px-5 dark:border-left">
-        <div class="user flex items-center justify-between cursor-pointer border-bot pb-3">
-            <div class="user-data flex items-center">
+    <header class="bg-asideBg lg:hidden py-5">
+      <div class="mx-auto px-5 flex items-center justify-between">
+        <img class="h-7" id="mobile-menu" src="assets/mobile-menu.svg" alt="">
+        <img class = "h-11" src="assets/logo.svg" alt="">
+      </div>
+    </header>
+    <aside id="sidbar" class="bg-asideBg transition-all w-full -translate-x-full 
+    lg:translate-x-0 lg:w-[250px] xl:w-[300px] h-screen fixed pt-10 px-5 dark:border-left">
+        <div class="user flex items-center justify-between border-bot pb-3">
+            <div class="user-data flex items-center cursor-default">
                 <img src="assets/avatar.png" class="h-10 w-10 rounded-full" alt="avatar">
                 <div class="user-name ml-4">
                     <p class="text-darkTextClr">Панькин Кирилл</p>
@@ -18,7 +25,7 @@
                     <!-- Тут будет иконка с уведомлениями -->
                 </div>
             </div>
-            <img class="h-5 self-start mt-2 settings" src="assets/settings.svg" alt="">
+            <img class="h-5 self-start mt-2 settings cursor-pointer" id="settings" src="assets/settings.svg" alt="">
         </div>
 
         <!-- Навигация -->
@@ -45,25 +52,35 @@
 
         <!-- Ссылка наверх страницы -->
 
-        <div class="absolute bottom-[40px] text-darkTextClr w-[260px]">
+        <div class="hidden lg:block absolute bottom-[40px] text-darkTextClr lg:w-[210px] xl:w-[260px]">
             <div class="cursor-pointer flex items-center border-bot pb-3">
                 <img src="assets/arrow.svg" alt="">
                 <a href = "#search" class="ml-3">вернуться наверх</a>
             </div>
         </div>
         
+        <!-- Настройки -->
+        <div id="settings-menu" class="absolute -right-40 rounded-xl top-5 w-36 h-36 p-2 bg-blocksBg shadow-lg text-center">
+          <p>Сменить тему</p>
+          <label class="inline-flex relative items-center cursor-pointer mt-3">
+            <input type="checkbox" value="" class="sr-only peer">
+            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-red-300 dark:peer-focus:ring-red-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-600"></div>
+            <span id="theme-text" class="ml-1 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
+          </label>
+        </div>
+
     </aside>
     <!-- Контейнер под контент -->
-    <div class="wrapper pl-[300px] pt-[40px] w-full">
+    <div class="wrapper lg:pl-[250px] xl:pl-[300px] pt-[40px] w-full">
         <!-- Сам контент -->
         <main class="mx-auto max-w-7xl px-5">
-            <div id="search" class="search w-full rounded-3xl flex items-center justify-between px-9 bg-blocksBg h-16">
-                <form action="" class="w-3/4 flex items-center">
+            <div id="search" class="search w-full rounded-3xl flex-col sm:flex-row flex items-center sm:justify-between px-9 bg-blocksBg py-3">
+                <form action="" class="sm:w-3/4 w-full flex items-center sm:justify-start justify-between">
                     <input type="text" placeholder="искать новость" name="search" class="outline-none w-3/4 p-2 pb-1 mb-2 border-bot">
                     <!-- Надо сделать иконку поиска -->
                     <button class="ml-6">найти</button>
                 </form>
-                <button class="bg-buttonsBg px-4 py-2 rounded-2xl">Сбросить</button>
+                <button class="bg-buttonsBg mt-3 px-10 sm:mt-0 sm:px-4 py-2 rounded-2xl">Сбросить</button>
             </div>
 
             <!-- Контейнер под статьи и фильтры -->
@@ -75,5 +92,7 @@
             </div>
         </main>
     </div>
+    <script src="js/menu.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>

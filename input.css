@@ -11,7 +11,22 @@
     .border-bot{
         border-bottom: 1px solid #626262;
     }
-    .doreder-right{
+    .border-left{
         border-left: 1px solid #626262;
+    }
+    .border-right{
+        border-right: 1px solid #626262;
+    }
+    .imgs::-webkit-scrollbar{
+        display: none;
+    }
+    .imgs img:not(:first-child){
+        margin-top: 20px;
+    }
+    .some-content p:not(:first-child){
+        margin-top: 20px;
+    }
+    .articles article:not(:first-child){
+        margin-top: 30px;
     }
 }

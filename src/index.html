@@ -60,21 +60,21 @@
         </div>
         
         <!-- Настройки -->
-        <div id="settings-menu" class="absolute -right-40 rounded-xl top-5 w-36 h-36 p-2 bg-blocksBg shadow-lg text-center">
+        <!-- <div id="settings-menu" class="absolute -right-40 rounded-xl top-5 w-36 h-36 p-2 bg-blocksBg shadow-lg text-center">
           <p>Сменить тему</p>
-          <label class="inline-flex relative items-center cursor-pointer mt-3">
-            <input type="checkbox" value="" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-red-300 dark:peer-focus:ring-red-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-600"></div>
-            <span id="theme-text" class="ml-1 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
+          <label class="inline-flex relative items-center cursor-pointer mt-2 " for="theme">
+            <input id="theme" type="checkbox" value="" class="sr-only peer">
+            <div class="w-9 h-5 bg-buttonsBg peer-focus:outline-none peer-focus:ring-4 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toggle me</span>
           </label>
-        </div>
+        </div> -->
 
     </aside>
     <!-- Контейнер под контент -->
     <div class="wrapper lg:pl-[250px] xl:pl-[300px] pt-[40px] w-full">
         <!-- Сам контент -->
         <main class="mx-auto max-w-7xl px-5">
-            <div id="search" class="search w-full rounded-3xl flex-col sm:flex-row flex items-center sm:justify-between px-9 bg-blocksBg py-3">
+            <div id="search" class="search w-full rounded-2xl flex-col sm:flex-row flex items-center sm:justify-between px-9 bg-blocksBg py-3">
                 <form action="" class="sm:w-3/4 w-full flex items-center sm:justify-start justify-between">
                     <input type="text" placeholder="искать новость" name="search" class="outline-none w-3/4 p-2 pb-1 mb-2 border-bot">
                     <!-- Надо сделать иконку поиска -->
@@ -86,9 +86,91 @@
             <!-- Контейнер под статьи и фильтры -->
             <div class="articles-container mt-[40px] grid grid-cols-4 gap-6">
                 <div class="articles col-start-1 col-end-4 h-96">
-                    <article class="bg-blocksBg"></article>
+                    <!-- Статья от админа с контентом -->
+                    <article class="bg-blocksBg p-[50px] rounded-2xl flex relative admin-article">
+                        <!-- изображения -->
+                        <div class="imgs pr-[50px] max-w-[350px] overflow-y-scroll max-h-[400px] border-right">
+                            <img class="max-w-[300px] rounded-xl " src="assets/img.png" alt="">
+                            <img class="max-w-[300px] rounded-xl " src="assets/img.png" alt="">
+                        </div>
+                        <!-- текст новости -->
+                        <div class="some-content py-8 pl-[50px] flex-1">
+                            <h2 class="text-2xl">Заголовок новости</h2>
+                            <p class="mt-10 text-xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                            <p class="mt-10 text-xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                        </div>
+                        <!-- дата -->
+                        <p class="date absolute top-5 right-8 text-base font-light">20.02.2022</p>
+                    </article>
+                    <!-- Статья от куратора -->
+                    <article class="bg-blocksBg p-[50px] rounded-2xl flex relative curator-article">
+                        <!-- текст новости -->
+                        <div class="some-content flex-1">
+                            <h2 class="text-2xl">Заголовок новости</h2>
+                            <p class="mt-10 text-xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                            <p class="mt-10 text-xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                        </div>
+                        <!-- дата -->
+                        <p class="date absolute top-5 right-8 text-base font-light">20.02.2022</p>
+                    </article>
+
+                    <!-- Статья от админа с контентом -->
+                    <article class="bg-blocksBg p-[50px] rounded-2xl flex relative admin-article">
+                        <!-- изображения -->
+                        <div class="imgs pr-[50px] max-w-[350px] overflow-y-scroll max-h-[400px] border-right">
+                            <img class="max-w-[300px] rounded-xl " src="assets/img.png" alt="">
+                            <img class="max-w-[300px] rounded-xl " src="assets/img.png" alt="">
+                        </div>
+                        <!-- текст новости -->
+                        <div class="some-content py-8 pl-[50px] flex-1">
+                            <h2 class="text-2xl">Заголовок новости</h2>
+                            <p class="mt-10 text-xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                            <p class="mt-10 text-xl font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                        </div>
+                        <!-- дата -->
+                        <p class="date absolute top-5 right-8 text-base font-light">20.02.2022</p>
+                    </article>
                 </div>
-                <div class="filters"></div>
+                <div class="filters bg-blocksBg rounded-xl p-[30px]">
+                    <form action="">
+                        <!-- Элемент фильтра -->
+                        <div class="filter">
+                            <div class="filter-title border-bot py-1 font-semibold text-xl mb-[10px]">
+                                Тип новости
+                            </div>
+                            <div class="some-filter mt-[5px] w-full">
+                                <label for="curator" class="flex items-center justify-between w-full">
+                                    <span>От куратора</span>
+                                    <input type="radio" name="type-article" id="curator">
+                                </label>
+                            </div>
+                            <div class="some-filter mt-[5px] w-full">
+                                <label for="admin" class="flex items-center justify-between w-full">
+                                    <span>От администрации</span>
+                                    <input type="radio" name="type-article" id="admin">
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Элемент фильтра -->
+                        <div class="filter mt-4">
+                            <div class="filter-title border-bot py-1 font-semibold text-xl mb-[10px]">
+                                Тип новости
+                            </div>
+                            <div class="some-filter mt-[5px] w-full">
+                                <label for="curator" class="flex items-center justify-between w-full">
+                                    <span>От куратора</span>
+                                    <input type="radio" name="type-article" id="curator">
+                                </label>
+                            </div>
+                            <div class="some-filter mt-[5px] w-full">
+                                <label for="admin" class="flex items-center justify-between w-full">
+                                    <span>От администрации</span>
+                                    <input type="radio" name="type-article" id="admin">
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </main>
     </div>
